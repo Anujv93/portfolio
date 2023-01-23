@@ -26,6 +26,7 @@ body {
 }
 
 header {
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,12 +104,12 @@ button {
   -moz-animation-name: bounce;
 }
 
-.about_me_image {
-  transition: transform 0.5s;
+.about_me_img{
+  transition: transform 1s;
 }
 
-.about_me_image:hover {
-  transform: scale(1.05);
+.about_me_img:hover {
+  transform: scale(1.05) translateY(-20px) translateX(10px);
 }
 
 .hero_object.one {
@@ -555,7 +556,7 @@ button {
   position:fixed;
   width:100%;
   height: 100vh;
-  z-index:0;
+  z-index: -10;
   overflow:hidden;
   top:0;
   left:0;
@@ -566,10 +567,13 @@ button {
   bottom:-100px;
   width:40px;
   height: 40px;
-  background:#f1f1f1;
+  background: linear-gradient(93.99deg, #FF76E9 17.73%, #00D1FF 106%, rgba(255, 255, 255, 0) 106.01%), #7939FF;
   border-radius:50%;
   opacity:0.5;
   animation: rise 10s infinite ease-in;
+  -webkit-box-shadow:0px 0px 111px 29px rgba(182,92,230,0.97);
+-moz-box-shadow: 0px 0px 111px 29px rgba(182,92,230,0.97);
+box-shadow: 0px 0px 111px 29px rgba(182,92,230,0.97);
 }
 
 .bubble:nth-child(1){
